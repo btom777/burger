@@ -26,13 +26,13 @@ var source = {
         host: 'z37udk8g6jiaqcbx.cbetxkdyhwsb.us-east-1.rds.amazonaws.com',
         user: 'u1vekjuztwxe03xm',
         password: "mqt70h61dqqetgmb",
-        database: "burgers_db" 
+        database: "fzy59kbzx59rnnlw" 
     }
 }
 
 // we use source.[name of connection] to hook into mysql
-var connection = mysql.createConnection(source.jawsDB);
 
+var connection = mysql.createConnection(source.jawsDB);
 
 connection.connect(function(err) {
     if (err) {
