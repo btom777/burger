@@ -3,6 +3,7 @@ var bodyParser = require('body-parser');
 var methodOverride = require('method-override');
 
 var app = express();
+var path = require('path');
 var mysql = require('mysql');
 
 var connection = mysql.createConnection(process.env.JAWSDB_URL);
@@ -19,7 +20,7 @@ connection.query('SELECT 1 + 1 AS solution', function(err, rows, fields) {
 app.use(bodyParser.urlencoded({
 	extended: false
 }));
-app.use(express.static(path.join(__dirname, 'public')))
+app.use(express.static(path.join(__dirname, 'public')));
 
 // override with POST having ?_method=DELETE
 app.use(methodOverride('_method'));
