@@ -1,8 +1,5 @@
 var connection = require('../config/connection.js');
 
-var table = "burgers";
-var tableInput = "burgers";
-
 function printQuestionMarks(num) {
     var arr = [];
 
